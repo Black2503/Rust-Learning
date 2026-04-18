@@ -7,12 +7,12 @@ fn main(){
     let mut mode = String::new();
     io::stdin().read_line(&mut mode).expect("Failed to read line");
     match mode.trim().parse::<i32>(){
-        Ok(1) => GuessNumber(),
+        Ok(1) => guess_number(),
         _ => println!("Invalid mode")
     }
 }
 
-fn GuessNumber(){
+fn guess_number(){
     println!("Guess a number between 1 and 100.");
     let secret_number = rand::thread_rng().gen_range(1..=100);
 // Or use:
